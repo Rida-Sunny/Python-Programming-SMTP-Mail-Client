@@ -29,7 +29,7 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
 
     # Send MAIL FROM command and handle server response.
     # Fill in start
-    mailFromCommand = 'Mail from: <alice@example.com>\r\n'
+    mailFromCommand = 'MAIL FROM: <alice@example.com>\r\n'
     clientSocket.send(mailFromCommand.encode())
     recv2 = clientSocket.recv(1024).decode()
     # Fill in end
